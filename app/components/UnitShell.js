@@ -81,12 +81,89 @@ export default function UnitShell({ unit, formatMft, floorLabel }) {
           Az ár tájékoztató jellegű. Pontos információért kérj ajánlatot.
         </p>
       </section>
+      <section className={styles.docsSection} aria-label="Dokumentumok">
+        <h2 className={styles.docsTitle}>Dokumentumok</h2>
 
-      <div className={styles.footerRow}>
+        <div className={styles.docsList}>
+          <div className={styles.docRow}>
+            <span className={styles.docIcon} aria-hidden="true" />
+            <div className={styles.docName}>E-0A helyszínrajz</div>
+            <div className={styles.docActions}>
+              <a className={styles.docBtn} href="/files/E-0A_helyszin.pdf" download>
+                Letöltés
+              </a>
+              <a
+                className={`${styles.docBtn} ${styles.docBtnGhost}`}
+                href="/files/E-0A_helyszin.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Megnyitás
+              </a>
+            </div>
+          </div>
+
+          <div className={styles.docRow}>
+            <span className={styles.docIcon} aria-hidden="true" />
+            <div className={styles.docName}>Földszint alaprajz ME-1</div>
+            <div className={styles.docActions}>
+              <a className={styles.docBtn} href="/files/ME-1_foldszint_alaprajz.pdf" download>
+                Letöltés
+              </a>
+              <a
+                className={`${styles.docBtn} ${styles.docBtnGhost}`}
+                href="/files/ME-1_foldszint_alaprajz.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Megnyitás
+              </a>
+            </div>
+          </div>
+
+          <div className={styles.docRow}>
+            <span className={styles.docIcon} aria-hidden="true" />
+            <div className={styles.docName}>1. Emelet alaprajz ME-2</div>
+            <div className={styles.docActions}>
+              <a className={styles.docBtn} href="/files/ME-2_I_emelet_alaprajz.pdf" download>
+                Letöltés
+              </a>
+              <a
+                className={`${styles.docBtn} ${styles.docBtnGhost}`}
+                href="/files/ME-2_I_emelet_alaprajz.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Megnyitás
+              </a>
+            </div>
+          </div>
+
+          <div className={styles.docRow}>
+            <span className={styles.docIcon} aria-hidden="true" />
+            <div className={styles.docName}>2. Emelet alaprajz ME-3</div>
+            <div className={styles.docActions}>
+              <a className={styles.docBtn} href="/files/ME-3_II_emelet_alaprajz.pdf" download>
+                Letöltés
+              </a>
+              <a
+                className={`${styles.docBtn} ${styles.docBtnGhost}`}
+                href="/files/ME-3_II_emelet_alaprajz.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Megnyitás
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+         <div className={styles.footerRow}>
         <Link className={styles.backBtn} href="/lakasok">
-          Összes lakás
+          Többi lakás megtekintése
         </Link>
       </div>
+
     </div>
 
   );

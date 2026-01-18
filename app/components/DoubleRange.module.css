@@ -25,49 +25,48 @@
   font-size: 0.9rem;
 }
 
-/* ✅ Keret + clipping */
+/* Track wrapper */
 .rangeTrack {
+  --track-h: 6px;
+  --thumb: 32px;   
+  --hit: 44px;     
+
   position: relative;
-  height: 38px;
-  border-radius: 14px;
+  height: 44px; 
+  border-radius: 16px;
   border: 1px solid rgba(212, 175, 55, 0.18);
   background: rgba(15, 10, 6, 0.45);
   overflow: hidden;
-
-  /* finom prémium */
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22) inset;
 }
 
-/* két range input egymás felett */
 .rangeInput {
   position: absolute;
   inset: 0;
   width: 100%;
-  pointer-events: none;
+  background: transparent;
   -webkit-appearance: none;
   appearance: none;
-  background: transparent;
-
-  /* jobb touch + scroll */
-  touch-action: none;
+  pointer-events: none;
+  touch-action: pan-y;
 }
 
-/* ✅ a sáv a kereten belül, középre igazítva */
+/* WebKit track */
 .rangeInput::-webkit-slider-runnable-track {
-  height: 6px;
+  height: var(--track-h);
   border-radius: 999px;
   background: rgba(212, 175, 55, 0.18);
-  /* a track alapból középre kerül, de a fillt is igazítjuk hozzá */
 }
 
-/* ✅ thumbok mozoghatnak + középre kerülnek a 6px sávhoz képest */
+/* WebKit thumb */
 .rangeInput::-webkit-slider-thumb {
   -webkit-appearance: none;
   pointer-events: auto;
 
-  width: 18px;
-  height: 18px;
+  width: var(--thumb);
+  height: var(--thumb);
   border-radius: 999px;
+
   background: linear-gradient(
     135deg,
     rgba(212, 175, 55, 1),
@@ -75,47 +74,49 @@
   );
   border: 2px solid rgba(15, 10, 6, 0.85);
 
-  /* ✅ a thumb közepére igazítás a 6px trackhez (18-6)/2 = 6 */
-  margin-top: -6px;
+  /* középre igazítás: (thumb - track)/2 */
+  margin-top: calc((var(--track-h) - var(--thumb)) / 2);
 
-  /* ✅ oldalirányban nagyobb shadow */
+  /* Láthatatlan nagy tap area + prémium shadow */
   box-shadow:
+    0 0 0 calc((var(--hit) - var(--thumb)) / 2) rgba(0, 0, 0, 0),
     0 10px 16px rgba(0, 0, 0, 0.35),
     0 0 24px rgba(212, 175, 55, 0.18),
     10px 0 22px rgba(0, 0, 0, 0.28),
     -10px 0 22px rgba(0, 0, 0, 0.28);
 }
 
-/* ✅ kitöltés a track közepén (38px magas: (38-6)/2 = 16px) */
+/* active feedback */
+.rangeInput::-webkit-slider-thumb:active {
+  transform: scale(1.03);
+}
+
+/* Fill középre (a rangeTrack 44px magas) */
 .fill {
   position: absolute;
-  height: 6px;
-  top: 16px;
+  height: var(--track-h);
+  top: calc((44px - var(--track-h)) / 2);
   border-radius: 999px;
   background: rgba(212, 175, 55, 0.55);
-
-  /* prémium: finom fény */
   box-shadow: 0 0 18px rgba(212, 175, 55, 0.12);
 }
 
-/* hover/active: finom visszajelzés */
 .rangeTrack:hover {
   border-color: rgba(212, 175, 55, 0.28);
 }
-.rangeInput::-webkit-slider-thumb:active {
-  transform: scale(1.02);
-}
 
-/* Firefox */
+/* Firefox track */
 .rangeInput::-moz-range-track {
-  height: 6px;
+  height: var(--track-h);
   border-radius: 999px;
   background: rgba(212, 175, 55, 0.18);
 }
 
+/* Firefox thumb */
 .rangeInput::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
+  pointer-events: auto;
+  width: var(--thumb);
+  height: var(--thumb);
   border-radius: 999px;
   background: linear-gradient(
     135deg,
@@ -124,10 +125,21 @@
   );
   border: 2px solid rgba(15, 10, 6, 0.85);
 
-  /* ✅ oldalirányban nagyobb shadow (Firefox-ban nincs margin-top trükk ugyanúgy) */
   box-shadow:
     0 10px 16px rgba(0, 0, 0, 0.35),
     0 0 24px rgba(212, 175, 55, 0.18),
     10px 0 22px rgba(0, 0, 0, 0.28),
     -10px 0 22px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 480px) {
+  .rangeTrack {
+    --thumb: 36px;
+    height: 48px;
+    border-radius: 18px;
+  }
+
+  .fill {
+    top: calc((48px - var(--track-h)) / 2);
+  }
 }

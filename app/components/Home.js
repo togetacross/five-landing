@@ -222,7 +222,7 @@ export default function Home() {
           <div
             className={styles.splitMedia}
             aria-hidden="true"
-            style={{ backgroundImage: 'url("/imgs/Szitasdomb_antracit_4.png")' }}
+            style={{ backgroundImage: 'url("/imgs/Szitasdomb_antracit_8.png")' }}
           />
         </div>
       </section >
@@ -232,7 +232,7 @@ export default function Home() {
       <div className={styles.bottomCta}>
           <div>
             <h3 className={styles.h3}>Nézd meg az elérhető lakásokat</h3>
-            <p className={''}>Alapterület, ár, elrendezés – minden egy helyen, átláthatóan.</p>
+            <p className={''}>Alapterület, ár, elrendezés – minden egy helyen.</p>
           </div>
           <Link className={styles.btnPrimary} href="/lakasok">
             Elérhető lakások

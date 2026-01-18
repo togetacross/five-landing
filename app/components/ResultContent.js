@@ -1,13 +1,13 @@
 import FiltersClient from '../lakasok/FiltersClient.js';
-import UnitsLoader from './UnitsLoader.client.js';
+import UnitsLoader from './UnitsLoader.js';
 import styles from './ResultContent.module.css';
 
 export default function ResultContent({ stats, filters, orientations, filteredCount }) {
   return (
     <div className={styles.stack}>
-      <div className={`${styles.row} ${styles.between}`}>
+      <div className={styles.row}>
         <div>
-          <h1>Eladó lakások</h1>
+          <h1 className={styles.title} >Eladó lakások</h1>
           <p className={styles.muted}>
             Szűrés - Találatok:{' '}
             <b>{filteredCount}</b>

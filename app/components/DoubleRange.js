@@ -1,3 +1,5 @@
+// DoubleRange.js
+import { useState } from 'react';
 import styles from './DoubleRange.module.css';
 
 function clamp(n, a, b) {
@@ -12,8 +14,10 @@ export default function DoubleRange({
   valueMax,
   onChange,
   label,
-  format,
+  format = (v) => v,
 }) {
+  const [active, setActive] = useState(null); // 'min' | 'max' | null
+
   const minVal = clamp(valueMin ?? min, min, max);
   const maxVal = clamp(valueMax ?? max, min, max);
 
@@ -21,13 +25,15 @@ export default function DoubleRange({
   const rightPct = ((maxVal - min) / (max - min)) * 100;
 
   function setMin(v) {
-    const nextMin = Math.min(v, (valueMax ?? max) - step);
-    onChange({ min: nextMin, max: valueMax ?? max });
+    const clamped = clamp(v, min, max);
+    const nextMin = Math.min(clamped, maxVal - step);
+    onChange({ min: nextMin, max: maxVal });
   }
 
   function setMax(v) {
-    const nextMax = Math.max(v, (valueMin ?? min) + step);
-    onChange({ min: valueMin ?? min, max: nextMax });
+    const clamped = clamp(v, min, max);
+    const nextMax = Math.max(clamped, minVal + step);
+    onChange({ min: minVal, max: nextMax });
   }
 
   return (
@@ -53,6 +59,10 @@ export default function DoubleRange({
             step={step}
             value={minVal}
             className={styles.rangeInput}
+            style={{ zIndex: active === 'min' ? 2 : 1 }}
+            onPointerDown={() => setActive('min')}
+            onPointerUp={() => setActive(null)}
+            onPointerCancel={() => setActive(null)}
             onChange={(e) => setMin(Number(e.target.value))}
             aria-label={`${label} minimum`}
           />
@@ -64,6 +74,10 @@ export default function DoubleRange({
             step={step}
             value={maxVal}
             className={styles.rangeInput}
+            style={{ zIndex: active === 'max' ? 2 : 1 }}
+            onPointerDown={() => setActive('max')}
+            onPointerUp={() => setActive(null)}
+            onPointerCancel={() => setActive(null)}
             onChange={(e) => setMax(Number(e.target.value))}
             aria-label={`${label} maximum`}
           />
