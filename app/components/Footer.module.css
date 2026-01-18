@@ -1,12 +1,185 @@
+
 .footer {
-  padding: 2rem 0 2.5rem;
-  color: var(--muted);
-  background: rgba(15, 10, 6, 0.72);
-  border-top: 1px solid rgba(212, 175, 55, 0.12);
   margin-top: 2rem;
+  padding: 28px 0 30px;
+
+  background: rgba(18, 14, 10, 0.9);
+  border-top: 1.5px solid rgba(212, 175, 55, 0.28);
+
+  color: rgba(247, 243, 236, 0.78);
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== 1. sor: Kapcsolat ===== */
+
+.contactWrap {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contactTitle {
+  margin: 14px 0 24px 0;
+  font-weight: 850;
+  font-size: 1.3rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(247, 243, 236, 0.85);
+}
+
+/* Desktopon: egymás mellett | Mobilon: egymás alatt */
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* ===== Kontakt kártya ===== */
+.contactItem {
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  padding: 14px 18px;
+  border-radius: 14px;
+
+  text-decoration: none;
+  font-weight: 750;
+  font-size: 1rem;
+
+  color: rgba(247, 243, 236, 0.96);
+
+  background: linear-gradient(
+    180deg,
+    rgba(26, 22, 18, 0.98),
+    rgba(22, 18, 15, 0.98)
+  );
+
+  /* világosabb, vastagabb border */
+  border: 2px solid rgba(247, 243, 236, 0.22);
+
+  /* letisztult árnyék */
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  transition: transform 140ms ease, border-color 140ms ease;
+}
+
+.contactItem:hover {
+  transform: translateY(-1px);
+}
+
+/* ===== Ikon + szöveg igazítás ===== */
+
+.contactIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 42px;
+  font-size: 20px;
+
+  background: rgba(0, 0, 0, 0.24);
+  border: 1.5px solid rgba(247, 243, 236, 0.22);
+}
+
+.contactText {
+  min-width: 200px;
+  text-align: left;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* ===== Telefon – emerald prémium ===== */
+.phoneCard {
+  border-color: rgba(16, 185, 129, 0.45);
+}
+
+.phoneCard .contactIcon {
+  color: rgba(167, 243, 208, 0.95);
+  border-color: rgba(16, 185, 129, 0.45);
+}
+
+/* ===== Mail – arany prémium ===== */
+.mailCard {
+  border-color: rgba(212, 175, 55, 0.55);
+}
+
+.mailCard .contactIcon {
+  color: rgba(255, 236, 179, 0.95);
+  border-color: rgba(212, 175, 55, 0.55);
+}
+
+/* ===== 2. sor: Linkek ===== */
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  padding-top: 16px;
+  border-top: 1.5px solid rgba(212, 175, 55, 0.22);
+}
+
+.footerLink {
+  text-decoration: none;
+  font-weight: 700;
+
+  color: rgba(247, 243, 236, 0.8);
+  border-bottom: 1.5px solid transparent;
+
+  transition: color 140ms ease, border-color 140ms ease;
+}
+
+.footerLink:hover {
+  color: rgba(255, 246, 228, 0.95);
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+/* ===== 3. sor: copyright ===== */
+
+.footerCopy {
+  display: flex;
+  justify-content: center;
+
+  color: rgba(247, 243, 236, 0.65);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 700px) {
+  /*.contact {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contactItem {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .contactText {
+    min-width: 0;
+    white-space: normal;
+  }
+  */
 }

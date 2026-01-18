@@ -33,7 +33,6 @@
   line-height: 1.1;
   margin: 1rem 0 1.2rem 0;
   letter-spacing: -0.02em;
-  /*color: #101113;*/
   color: rgba(242, 239, 233, 0.82);
 }
 .h2_dark {
@@ -41,7 +40,6 @@
   line-height: 1.1;
   margin: 1rem 0 1.2rem 0;
   letter-spacing: -0.02em;
-  /*color: #101113;*/
   color: #101113;
 }
 

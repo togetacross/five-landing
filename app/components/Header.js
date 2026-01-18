@@ -12,7 +12,7 @@ export default function Header() {
           <span>FIVE° Projekt</span>
         </Link>
         <nav className={styles.nav}>
-          <Link href="/">Home</Link>
+          <Link href="/">Főoldal</Link>
           <Link href="/lakasok">Lakások</Link>
         </nav>
       </div>

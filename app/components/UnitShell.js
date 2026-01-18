@@ -75,7 +75,7 @@ export default function UnitShell({ unit, formatMft, floorLabel }) {
       <section className={styles.priceBox}>
         <span className={styles.priceLabel}>Kulcsrakész ár</span>
         <b className={styles.priceValue}>
-          {unit.priceKkFt ? `${unit.priceKkFt.toLocaleString("hu-HU")} M Ft` : "—"}
+          {unit.priceKkFt ? `${unit.priceKkFt.toLocaleString("hu-HU")} Ft` : "—"}
         </b>
         <p className={styles.priceHint}>
           Az ár tájékoztató jellegű. Pontos információért kérj ajánlatot.

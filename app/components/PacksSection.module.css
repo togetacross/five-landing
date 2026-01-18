@@ -320,11 +320,12 @@
 
 .subpackBody {
   padding: 1rem 1rem 1rem 1.05rem;
-  background: linear-gradient(
+  /*background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.92),
     rgba(255, 255, 255, 0.86)
-  );
+  );*/
+   background: #24211d;
  /* backdrop-filter: blur(6px);
  -webkit-backdrop-filter: blur(6px);
  */
@@ -334,13 +335,13 @@
   margin: 0;
   font-size: 1.1rem;
   letter-spacing: -0.01em;
-  color: #2a241e;
+  color: rgba(242, 239, 233, 0.82);
 }
 
 .subpackText {
   margin: 0.55rem 0 0 0;
   line-height: 1.7;
-  color: rgba(42, 36, 30, 0.76);
+  color: rgba(242, 239, 233, 0.82);
   font-size: 0.95rem;
 }
 

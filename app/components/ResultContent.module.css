@@ -15,6 +15,10 @@
   color: rgba(242, 239, 233, 0.82);
 }
 
+.title {
+  font-size: 2rem;
+}
+
 .between {
   justify-content: space-between;
 }
