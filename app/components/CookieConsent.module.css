@@ -1,0 +1,199 @@
+/* app/components/CookieConsent.module.css */
+/* Premium dark + halvány arany – design változatlan, csak layout/viselkedés finomítva */
+
+.bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 14px 12px;
+}
+
+.barOpen,
+.barClosed {
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.barClosed {
+  transform: translateY(110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.barOpen {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+/* Alap: ha elfér, nincs csúszka (magasság auto).
+   Csak kisebb képernyőn korlátozunk és görgetünk. */
+.inner {
+  width: min(1200px, 100%);
+  max-height: none;
+  overflow: visible;
+
+  border-radius: 18px;
+
+  background: rgba(18, 14, 10, 0.92);
+  border: 2px solid rgba(212, 175, 55, 0.24);
+
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+
+  padding: 16px 16px;
+  color: rgba(247, 243, 236, 0.86);
+}
+
+.title {
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 1.05rem;
+  color: rgba(255, 246, 228, 0.92);
+}
+
+.text {
+  margin-top: 8px;
+  line-height: 1.45;
+  color: rgba(247, 243, 236, 0.76);
+  font-size: 0.95rem;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  color: rgba(212, 175, 55, 0.92);
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.35);
+}
+
+.link:hover {
+  border-bottom-color: rgba(212, 175, 55, 0.6);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: start;
+}
+
+/* 2 gomb: desktop/tablet egymás mellett, azonos szélesség */
+.actionsTop {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: start;
+  justify-items: stretch;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.btn {
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 900;
+  cursor: pointer;
+  border: 2px solid rgba(247, 243, 236, 0.16);
+  background: transparent;
+  color: rgba(247, 243, 236, 0.9);
+
+  width: 100%; /* azonos szélesség */
+}
+
+.btnPrimary {
+  background: rgba(212, 175, 55, 0.16);
+  border-color: rgba(212, 175, 55, 0.34);
+  color: rgba(255, 246, 228, 0.95);
+}
+
+.btnSoft {
+  background: rgba(247, 243, 236, 0.06);
+  border-color: rgba(247, 243, 236, 0.18);
+}
+
+.btn:hover {
+  border-color: rgba(212, 175, 55, 0.32);
+}
+
+.prefs {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(212, 175, 55, 0.14);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+
+.row input {
+  margin-top: 3px;
+  accent-color: rgba(212, 175, 55, 0.9);
+}
+
+.rowText {
+  color: rgba(247, 243, 236, 0.78);
+  line-height: 1.35;
+  font-size: 0.95rem;
+}
+
+/* Sticky ikon (FAB) */
+.fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 70;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+
+  background: rgba(18, 14, 10, 0.9);
+  border: 2px solid rgba(212, 175, 55, 0.26);
+
+  color: rgba(255, 246, 228, 0.92);
+  font-size: 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.32);
+}
+
+.fab:hover {
+  border-color: rgba(212, 175, 55, 0.42);
+}
+
+/* Tablet/mobil: head 1 oszlop, gombok mobilon egymás alatt.
+   + csak itt legyen max magasság és görgetés, HA nem fér el. */
+@media (max-width: 720px) {
+  .head {
+    grid-template-columns: 1fr;
+  }
+
+  .actionsTop {
+    grid-template-columns: 1fr;
+  }
+
+  .inner {
+    max-height: min(500px, calc(100vh - 24px));
+    overflow: auto;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .barOpen,
+  .barClosed {
+    transition: none;
+  }
+}

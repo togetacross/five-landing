@@ -10,10 +10,10 @@ export default function Home() {
       {/* HERO*/}
       <section className={styles.hero} aria-labelledby="hero-title">
         <div className={styles.heroMedia} aria-hidden="true">
-          <img 
-            src="/imgs/latvany.jpg" 
-            alt="Five projekt" 
-            className={styles.heroImg} 
+          <img
+            src="/imgs/latvany.jpg"
+            alt="Five projekt"
+            className={styles.heroImg}
           />
           <div className={styles.heroOverlay} />
         </div>
@@ -44,8 +44,8 @@ export default function Home() {
                   <span className={styles.metaValue}>40-106 m²</span>
                 </div>
                 <div className={styles.metaItem}>
-                  <span className={styles.metaLabel}>Koncepció</span>
-                  <span className={styles.metaValue}>Egyedi ajánlatok</span>
+                  <span className={styles.metaLabel}>Átadás</span>
+                  <span className={styles.metaValue}>2027 szeptember</span>
                 </div>
               </div>
             </div>
@@ -111,6 +111,25 @@ export default function Home() {
 
 
       </section>
+
+      {/* Lokáció */}
+      <section className={styles.locationBlock}>
+        <h2 className={styles.h2_light}>ELHELYEZKEDÉS</h2>
+
+        <div className={styles.locationMap}>
+          <iframe
+            className={styles.locationIframe}
+            src="https://www.google.com/maps?q=Szitásdomb%20D%C3%A1lia%20utca%20Gy%C5%91r&z=16&hl=hu&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+            title="Társasház elhelyezkedése – Szitásdomb, Dália utca"
+          />
+        </div>
+      </section>
+
+
+
 
       {/* MŰSZAKI */}
       <section className={styles.section} aria-labelledby="tech-title">
@@ -194,6 +213,9 @@ export default function Home() {
             <p className={styles.muted}>
               Egy otthon kialakítása összetett folyamat. Mi ebben nyújtunk segítséget olyan kulcsrakész megoldásokkal, amelyek mögött tudatos tervezés, szakmai tapasztalat és esztétikai egység áll.
             </p>
+            <p className={styles.muted}>
+              A kulcsrakész ajánlat nem tartalmaz konyhabútort, mivel annak kialakítása egyedi igényekhez és elképzelésekhez igazodik.
+            </p>
           </div>
         </div>
 
@@ -230,13 +252,13 @@ export default function Home() {
       <PacksSection />
 
       <div className={styles.bottomCta}>
-          <div>
-            <h3 className={styles.h3}>Nézd meg az elérhető lakásokat</h3>
-            <p className={''}>Alapterület, ár, elrendezés – minden egy helyen.</p>
-          </div>
-          <Link className={styles.btnPrimary} href="/lakasok">
-            Elérhető lakások
-          </Link>
+        <div>
+          <h3 className={styles.h3}>Nézd meg az elérhető lakásokat</h3>
+          <p className={''}>Alapterület, ár, elrendezés – minden egy helyen.</p>
+        </div>
+        <Link className={styles.btnPrimary} href="/lakasok">
+          Elérhető lakások
+        </Link>
       </div>
     </>
   );

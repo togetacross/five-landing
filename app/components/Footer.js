@@ -16,7 +16,13 @@ export default function Footer() {
               href="tel:+36703720113"
               aria-label="Telefon"
             >
-              <span className={styles.contactIcon} aria-hidden="true">☎</span>
+              <span className={styles.contactIcon} aria-hidden="true">
+                <img
+                  src="/icons/whatsapp.png"
+                  alt=""
+                  className={styles.contactIconImg}
+                />
+              </span>
               <span className={styles.contactText}>+36 70 372 0113</span>
             </a>
 
@@ -25,7 +31,15 @@ export default function Footer() {
               href="mailto:szidonia.molnar@oh.hu"
               aria-label="Email"
             >
-              <span className={styles.contactIcon} aria-hidden="true">✉</span>
+              <span className={styles.contactIcon} aria-hidden="true">
+                 <span className={styles.contactIcon} aria-hidden="true">
+                <img
+                  src="/icons/email.png"
+                  alt=""
+                  className={styles.contactIconImg}
+                />
+              </span>
+              </span>
               <span className={styles.contactText}>szidonia.molnar@oh.hu</span>
             </a>
           </div>

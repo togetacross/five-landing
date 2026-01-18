@@ -78,7 +78,7 @@ export default function UnitShell({ unit, formatMft, floorLabel }) {
           {unit.priceKkFt ? `${unit.priceKkFt.toLocaleString("hu-HU")} Ft` : "—"}
         </b>
         <p className={styles.priceHint}>
-          Az ár tájékoztató jellegű. Pontos információért kérj ajánlatot.
+          Az ár tájékoztató jellegű, pontos információkért kérj ajánlatot.
         </p>
       </section>
       <section className={styles.docsSection} aria-label="Dokumentumok">

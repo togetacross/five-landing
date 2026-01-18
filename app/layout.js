@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import CookieConsent from './components/CookieConsent';
 
 export default function RootLayout({ children }) {
   return (
@@ -9,6 +10,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="container">{children}</main>
         <Footer />
+         <CookieConsent />
       </body>
     </html>
   );

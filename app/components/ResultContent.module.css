@@ -6,13 +6,14 @@
 }
 
 .row {
-  border-radius: 20px;
+  /*border-radius: 20px;*/
   padding: 1rem;;
   display: flex;
   gap: 1rem;
   align-items: center;
   flex-wrap: wrap;
   color: rgba(242, 239, 233, 0.82);
+  background: #24211d;
 }
 
 .title {
@@ -45,24 +46,25 @@
   min-width: 320px;
   align-self: start;
   justify-self: start;
+  background: #24211d;
 }
-
+/*
 .row {
     background: linear-gradient(
     180deg,
     rgba(27, 18, 10, 0.92),
     rgba(35, 23, 14, 0.85)
   );
-}
+}*/
 
 .card {
   border: var(--card-border);
-  background: linear-gradient(
+ /* background: linear-gradient(
     180deg,
     rgba(27, 18, 10, 0.92),
     rgba(35, 23, 14, 0.85)
   );
-  border-radius: 20px;
+  border-radius: 20px;*/
   padding: 1.25rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
