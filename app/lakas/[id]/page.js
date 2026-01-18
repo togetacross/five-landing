@@ -13,6 +13,12 @@ export async function generateStaticParams() {
   return units.map((u) => ({ id: u.slug }));
 }
 
+export const viewport = {
+  themeColor: '#0f0a06',
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export async function generateMetadata({ params }) {
   const units = await getAllUnits();
   const { id } = await params; // params nem Promise
@@ -20,6 +26,8 @@ export async function generateMetadata({ params }) {
   const base = getBaseUrl();
   const canonicalUrl = `${base}/lakas/${id}`;
   const ogDefault = `${base}/og/og.png`;
+
+
 
   if (!unit) {
     return {
@@ -52,9 +60,8 @@ export async function generateMetadata({ params }) {
     unit.m2?.toFixed ? unit.m2.toFixed(2).replace('.', ',') : String(unit.m2 ?? '');
 
   const title = `${unit.id} – ${floorLabel(unit.emelet)} – ${area} m² | FIVE° Projekt`;
-  const description = `Új építésű, kulcsrakész lakás: ${unit.id}, ${floorLabel(unit.emelet)}, ${unit.m2} m², tájolás: ${
-    unit.tajolas || '—'
-  }, kulcsrakész ár: ${formatMft(priceFt)}.`;
+  const description = `Új építésű, kulcsrakész lakás: ${unit.id}, ${floorLabel(unit.emelet)}, ${unit.m2} m², tájolás: ${unit.tajolas || '—'
+    }, kulcsrakész ár: ${formatMft(priceFt)}.`;
 
   return {
     metadataBase: new URL(base),

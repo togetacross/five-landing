@@ -1,5 +1,4 @@
 import { getAllUnits, getUnitsStats, applyFilters } from '../../lib/units.js';
-import SeoHead from '../components/SeoHead.js';
 import ResultContent from '../components/ResultContent.js';
 
 export const revalidate = 600;
@@ -10,35 +9,55 @@ function spNumber(v) {
   return Number.isFinite(n) ? n : null;
 }
 
-export async function generateMetadata({ searchParams }) {
-  /*
-   const sp = await searchParams;
- 
-   const floor = sp?.emelet != null && sp.emelet !== '' ? Number(sp.emelet) : null;
-   const hasGarden = sp?.kert === '1' || sp?.kert === 'true';
-   const hasBalcony = sp?.erkely === '1' || sp?.erkely === 'true';
-   const tajolas = sp?.tajolas || '';
-   const minPriceMft = spNumber(sp?.minAr);
-   const maxPriceMft = spNumber(sp?.maxAr);
-   const onlyAvailable = sp?.elerheto === 'true';
- 
-   const parts = ['Lakások'];
-   if (floor != null) parts.push(floor === 0 ? 'Földszint' : `${floor}. emelet`);
-   if (hasGarden) parts.push('kert');
-   if (hasBalcony) parts.push('erkély');
-   if (tajolas) parts.push(`${tajolas} tájolás`);
-   if (minPriceMft != null || maxPriceMft != null) parts.push('ár szűrés');
-   if (onlyAvailable) parts.push('csak elérhető');
- 
-   const title = parts.join(' – ') + ' | Prémium Residence';
-   const description = 'Prémium újépítésű lakások a Five ban, különböző méretben, árfekvésben és elrendezéssel. Találd meg álmaid otthonát a Prémium Residence kínálatában!';
- */
-}
+export const viewport = {
+  themeColor: '#0f0a06',
+  width: 'device-width',
+  initialScale: 1,
+};
 
+
+export async function generateMetadata({ searchParams }) {
+  const sp = await searchParams;
+
+  const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://fiveprojekt.com';
+  const canonicalUrl = `${base.replace(/\/$/, '')}/lakasok`;
+  const ogDefault = `${base.replace(/\/$/, '')}/og/og.png`;
+
+  // SEO: listaoldalnál NE legyen query-függő canonical
+  const title = 'Eladó lakások | FIVE° Projekt';
+  const description =
+    'Új építésű társasház, kulcsrakész eladó lakások 5 percre Győr belvárosától.';
+
+  return {
+    metadataBase: new URL(base),
+    title,
+    description,
+    alternates: { canonical: canonicalUrl },
+    robots: { index: true, follow: true },
+
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      images: [{ url: ogDefault, width: 1200, height: 630, alt: 'FIVE° Projekt' }],
+      locale: 'hu_HU',
+      siteName: 'FIVE° Projekt',
+      type: 'website',
+    },
+
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogDefault],
+    },
+  };
+}
 
 export default async function LakasokPage({ searchParams }) {
   const units = await getAllUnits();
   const stats = getUnitsStats(units);
+
   const sp = await searchParams;
 
   const filters = {
@@ -50,28 +69,18 @@ export default async function LakasokPage({ searchParams }) {
     hasGarden: sp?.kert === '1' || sp?.kert === 'true',
     hasBalcony: sp?.erkely === '1' || sp?.erkely === 'true',
     tajolas: sp?.tajolas || '',
-    // URL: ?elerheto=true -> only available
     onlyAvailable: sp?.elerheto === 'true',
   };
 
-  // note: units list is lazy-loaded client-side to keep the rest of the page static
   const orientations = Array.from(new Set(units.map((u) => u.tajolas).filter(Boolean)));
   const filteredCount = applyFilters(units, filters).length;
 
   return (
-    <>
-      <SeoHead
-        title="FIVE° Projekt"
-        description="Új építésű - kulcsrakész eladó lakások, 5 percre Győr belvárosától. Prémium műszaki tartalom, átlátható döntések."
-        path="/lakasok"
-      />
-
-      <ResultContent
-        stats={stats}
-        filters={filters}
-        orientations={orientations}
-        filteredCount={filteredCount}
-      />
-    </>
+    <ResultContent
+      stats={stats}
+      filters={filters}
+      orientations={orientations}
+      filteredCount={filteredCount}
+    />
   );
 }

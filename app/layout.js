@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import CookieConsent from './components/CookieConsent';
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="hu">
       <body>

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Technikai útvonalak tiltása
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap
+Sitemap: https://fiveprojekt.com/sitemap.xml
