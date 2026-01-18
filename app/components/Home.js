@@ -45,7 +45,7 @@ export default function Home() {
                 </div>
                 <div className={styles.metaItem}>
                   <span className={styles.metaLabel}>Átadás</span>
-                  <span className={styles.metaValue}>2027 szeptember</span>
+                  <span className={styles.metaValue}>2027. szeptember</span>
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@ export default function Home() {
         <div className={styles.locationMap}>
           <iframe
             className={styles.locationIframe}
-            src="https://www.google.com/maps?q=Szitásdomb%20D%C3%A1lia%20utca%20Gy%C5%91r&z=16&hl=hu&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2683.7378649395373!2d17.634005712348557!3d47.7283365794425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476b958c32287a27%3A0xe0b3d53bb9f0fb!2sV%C3%A1mosszabadi%2C%20D%C3%A1lia%20utca%2010%2C%209061!5e0!3m2!1shu!2shu!4v1768768253264!5m2!1shu!2shu"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
@@ -231,7 +231,7 @@ export default function Home() {
               Munkájukat professzionális szemlélet jellemzi: több száz sikeres tervezés és több száz elégedett ügyfél áll mögöttük.
             </p>
             <p className={styles.muted}>
-              Két eltérő szemléletű ajánlat közül lehet választani – attól függően, hogy a hangsúly az előre megtervezett biztonságon vagy a teljes személyre szabhatóságon van.
+              Három eltérő szemléletű ajánlat közül lehet választani – attól függően, hogy a hangsúly az előre megtervezett biztonságon vagy a teljes személyre szabhatóságon van.
             </p>
             {/*
             <p className={styles.muted}>

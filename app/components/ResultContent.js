@@ -8,6 +8,12 @@ export default function ResultContent({ stats, filters, orientations, filteredCo
       <div className={styles.row}>
         <div>
           <h1 className={styles.title} >Eladó lakások</h1>
+          <div className={styles.priceInfo}>
+            <p className={styles.muted}>
+              A weboldalon feltüntetett kulcsrakész árak a Gold csomag aktuális tartalmán alapulnak,
+              így az ajánlat a közzététel időpontjában érvényes csomagösszeállítást tükrözi.
+            </p>
+          </div>
           <p className={styles.muted}>
             Szűrés - Találatok:{' '}
             <b>{filteredCount}</b>

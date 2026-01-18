@@ -111,7 +111,10 @@ export default function CookieConsent() {
                 hozzájárulása esetén — statisztikai és marketing célokra. A beállításokat
                 bármikor módosíthatja.
               </div>
-              <a className={styles.link} href="/adatkezeles">
+              <a className={styles.link}
+                href="/files/Adatkezelesi_es_suti_tajekoztato.pdf"
+                target="_blank"
+                rel="noreferrer">
                 Adatkezelési tájékoztató
               </a>
             </div>

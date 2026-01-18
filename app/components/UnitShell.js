@@ -78,7 +78,9 @@ export default function UnitShell({ unit, formatMft, floorLabel }) {
           {unit.priceKkFt ? `${unit.priceKkFt.toLocaleString("hu-HU")} Ft` : "—"}
         </b>
         <p className={styles.priceHint}>
-          Az ár tájékoztató jellegű, pontos információkért kérj ajánlatot.
+          A weboldalon feltüntetett kulcsrakész árak a Gold csomag aktuális tartalmán alapulnak, 
+          így az ajánlat a közzététel időpontjában érvényes csomagösszeállítást tükrözi.<br/>
+          <a className={styles.continue} href='/#gold-title' target='blank'>Tovább a gold csomaghoz</a>
         </p>
       </section>
       <section className={styles.docsSection} aria-label="Dokumentumok">
