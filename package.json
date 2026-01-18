@@ -12,7 +12,6 @@
   "dependencies": {
     "next": "^15.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "photo-sphere-viewer": "^5.7.5"
+    "react-dom": "^19.0.0"
   }
 }
