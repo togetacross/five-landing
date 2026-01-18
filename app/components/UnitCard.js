@@ -84,7 +84,7 @@ export default function UnitCard({ unit }) {
           role="img"
           aria-label={`${unit.id} látványkép`}
         >
-          <img src="/imgs/latvany1.jpg" alt={`${unit.id} látványkép`} />
+          <img src="/imgs/latvany.jpg" alt={`${unit.id} látványkép`} />
           <div className={styles.heroMask} />
           <div className={styles.heroId}>{unit.id}</div>
         </div>

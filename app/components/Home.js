@@ -11,8 +11,8 @@ export default function Home() {
       <section className={styles.hero} aria-labelledby="hero-title">
         <div className={styles.heroMedia} aria-hidden="true">
           <img 
-            src="/imgs/latvany1.jpg" 
-            alt="Five projekt"
+            src="/imgs/latvany.jpg" 
+            alt="Five projekt" 
             className={styles.heroImg} 
           />
           <div className={styles.heroOverlay} />
