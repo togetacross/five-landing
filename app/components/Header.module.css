@@ -1,0 +1,52 @@
+.header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+  background: rgba(15, 10, 6, 0.72);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+  height: 60px;
+  z-index: 50;
+}
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+}
+.container {
+  max-width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.logo {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.3px;
+}
+.logoMark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.35),
+    rgba(212, 175, 55, 0.08)
+  );
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.nav a,
+.nav :global(a) {
+  margin-left: 1rem;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.nav a:hover,
+.nav :global(a:hover) {
+  color: var(--text);
+}

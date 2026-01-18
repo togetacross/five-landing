@@ -1,0 +1,12 @@
+.footer {
+  padding: 2rem 0 2.5rem;
+  color: var(--muted);
+  background: rgba(15, 10, 6, 0.72);
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+  margin-top: 2rem;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

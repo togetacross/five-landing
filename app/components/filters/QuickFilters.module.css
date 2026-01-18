@@ -1,0 +1,58 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.8rem;
+}
+
+.label {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 0.35rem;
+  color: var(--muted);
+}
+
+.quickRow {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.pill {
+  appearance: none;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  background: rgba(35, 23, 14, 0.35);
+  color: var(--muted);
+    min-width: 120px;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  line-height: 1;
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.pill:hover {
+  border-color: rgba(212, 175, 55, 0.32);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.pill:active {
+  transform: translateY(0px);
+}
+
+.active {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--text);
+  border-color: rgba(212, 175, 55, 0.38);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}

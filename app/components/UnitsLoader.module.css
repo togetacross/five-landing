@@ -1,0 +1,31 @@
+.unitsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .unitsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.loadingItem {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.card {
+  border: var(--card-border);
+  background: linear-gradient(
+    180deg,
+    rgba(27, 18, 10, 0.92),
+    rgba(35, 23, 14, 0.85)
+  );
+  border-radius: 20px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}

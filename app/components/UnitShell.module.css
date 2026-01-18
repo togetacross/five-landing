@@ -1,0 +1,337 @@
+/* ===============================
+   Premium lakas oldal (dark/warm)
+   Panel hatter: #24211d
+   Szoveg: rgba(242,239,233,0.90)
+================================ */
+
+.page {
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  padding: clamp(18px, 2.5vw, 34px) clamp(14px, 2vw, 28px);
+
+  color: rgba(242, 239, 233, 0.9);
+
+  /* háttér (nem panel): finom fényfoltok + sötét alap */
+  background:
+    radial-gradient(900px 520px at 18% 8%, rgba(214, 199, 161, 0.16), transparent 58%),
+    radial-gradient(760px 480px at 86% 14%, rgba(120, 100, 70, 0.14), transparent 62%),
+    linear-gradient(180deg, #151310 0%, #0f0e0c 100%);
+}
+
+/* ========== HEADER / FELSŐ SÁV ========== */
+
+.header {
+  position: relative;
+  margin-top: 0.75rem;
+  padding: clamp(16px, 2vw, 22px);
+  border-radius: 20px;
+
+  /* szöveg mögötti panel háttér */
+  background: #24211d;
+
+  /* premium keret + mélység */
+  border: 1px solid rgba(242, 239, 233, 0.10);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(242, 239, 233, 0.06);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Maszk / highlight a panelen (premium “fény” érzés) */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(700px 200px at 20% 0%, rgba(214, 199, 161, 0.22), transparent 60%),
+    radial-gradient(520px 260px at 92% 30%, rgba(242, 239, 233, 0.08), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 55%);
+
+  opacity: 0.9;
+}
+
+.headerLeft {
+  position: relative; /* a ::before fölé */
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.06;
+
+  font-size: clamp(1.6rem, 3.1vw, 2.6rem);
+  letter-spacing: -0.02em;
+
+  color: rgba(242, 239, 233, 0.95);
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.muted {
+  margin: 0;
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+
+  color: rgba(242, 239, 233, 0.78);
+}
+
+.badge {
+  position: relative;
+  z-index: 1;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+  min-width: 150px;
+  text-align: center;
+
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+
+  border: 1px solid rgba(242, 239, 233, 0.14);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  flex: 0 0 auto;
+}
+
+.available {
+  background: linear-gradient(180deg, rgba(37, 99, 60, 0.95), rgba(24, 74, 44, 0.95));
+  color: rgba(242, 239, 233, 0.95);
+  border-color: rgba(214, 199, 161, 0.22);
+}
+
+.unavailable {
+  background: linear-gradient(180deg, rgba(253, 236, 236, 0.16), rgba(253, 236, 236, 0.10));
+  color: rgba(242, 239, 233, 0.88);
+  border-color: rgba(242, 239, 233, 0.14);
+}
+
+/* ========== GRID / KÁRTYÁK ========== */
+
+.grid {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+
+  /* kényelmesebb premium layout */
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* alap kártya: 4 oszlop desktopon -> 3 kártya/sor (12/4=3) */
+.card {
+  grid-column: span 4;
+
+  background: #24211d;
+  border: 1px solid rgba(242, 239, 233, 0.10);
+  border-radius: 16px;
+
+  padding: 16px 16px;
+
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(242, 239, 233, 0.05);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* finom overlay kártyán (maszk) */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(420px 160px at 15% 0%, rgba(214, 199, 161, 0.12), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 60%);
+  opacity: 0.85;
+}
+
+.card span,
+.card b {
+  position: relative;
+  z-index: 1;
+}
+
+.card span {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: rgba(242, 239, 233, 0.72);
+  letter-spacing: 0.02em;
+}
+
+.card b {
+  display: block;
+  margin-top: 8px;
+
+  font-size: 1.15rem;
+  color: rgba(242, 239, 233, 0.95);
+  letter-spacing: -0.01em;
+}
+
+/* ========== ÁR DOBOZ (kiemelt) ========== */
+
+.priceBox {
+  margin-top: 16px;
+  padding: clamp(18px, 2.2vw, 26px);
+  border-radius: 20px;
+
+  background: #24211d;
+  border: 1px solid rgba(242, 239, 233, 0.12);
+
+  box-shadow:
+    0 22px 60px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(242, 239, 233, 0.06);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* premium “glow” maszk az ár dobozon */
+.priceBox::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  pointer-events: none;
+
+  background:
+    radial-gradient(700px 240px at 18% 0%, rgba(214, 199, 161, 0.22), transparent 60%),
+    radial-gradient(520px 220px at 92% 40%, rgba(242, 239, 233, 0.08), transparent 60%);
+
+  opacity: 0.95;
+}
+
+.priceLabel,
+.priceValue,
+.priceHint {
+  position: relative;
+  z-index: 1;
+}
+
+.priceLabel {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(242, 239, 233, 0.78);
+  letter-spacing: 0.02em;
+}
+
+.priceValue {
+  margin: 10px 0 0 0;
+  display: block;
+
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+
+  color: rgba(242, 239, 233, 0.96);
+}
+
+.priceHint {
+  margin: 10px 0 0 0;
+  font-size: 0.9rem;
+  color: rgba(242, 239, 233, 0.68);
+  line-height: 1.45;
+}
+
+/* ========== FOOTER ROW / VISSZA GOMB ========== */
+
+.footerRow {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 16px;
+  border-radius: 12px;
+
+  background: #24211d;
+  border: 1px solid rgba(242, 239, 233, 0.14);
+
+  color: rgba(242, 239, 233, 0.9);
+  text-decoration: none;
+  font-weight: 800;
+
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(242, 239, 233, 0.06);
+
+  transition: transform 140ms ease, border-color 140ms ease, opacity 140ms ease;
+}
+
+.backBtn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(214, 199, 161, 0.35);
+}
+
+.backBtn:active {
+  transform: translateY(0px);
+  opacity: 0.92;
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablet: 2 kártya/sor (12/6=2) */
+@media (max-width: 900px) {
+  .card {
+    grid-column: span 6;
+  }
+}
+
+/* Mobil: header tördel, badge full; 1 kártya/sor (12/12=1) */
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .title {
+    white-space: normal;
+  }
+
+  .badge {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .grid {
+    gap: 12px;
+  }
+
+  .card {
+    grid-column: span 12;
+  }
+}
+
+/* Accessibility: csökkentett animációk */
+@media (prefers-reduced-motion: reduce) {
+  .backBtn {
+    transition: none;
+  }
+}

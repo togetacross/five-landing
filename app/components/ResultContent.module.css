@@ -1,0 +1,78 @@
+/* ResultContent.module.css */
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.results {
+  width: 100%;
+}
+
+.filters {
+  position: sticky;
+  top: 92px;
+  width: 320px;
+  min-width: 320px;
+  align-self: start;
+  justify-self: start;
+}
+
+.card {
+  border: var(--card-border);
+  background: linear-gradient(
+    180deg,
+    rgba(27, 18, 10, 0.92),
+    rgba(35, 23, 14, 0.85)
+  );
+  border-radius: 20px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Keep right column stable during async loading (spinner) */
+.grid > section {
+  min-height: 420px;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    position: static;
+    top: auto;
+    width: 100%;
+    min-width: 0;
+    align-self: stretch;
+    justify-self: stretch;
+  }
+
+  .grid > section {
+    min-height: auto;
+  }
+}

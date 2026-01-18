@@ -1,0 +1,86 @@
+.field {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.8rem;
+}
+
+.field label {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+  color: var(--muted);
+}
+
+.field select {
+  margin: auto;
+  width: 250px;
+  font-size: 0.93rem;
+  padding: 0.6rem 1.2rem 0.6rem 2.6rem;
+  border-radius: 14px;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  background-color: rgba(15, 10, 6, 0.45);
+  color: var(--text);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      rgba(212, 175, 55, 0.9) 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(212, 175, 55, 0.9) 50%,
+      transparent 50%
+    );
+  background-position:
+    1.1rem 50%,
+    1.4rem 50%;
+  background-size:
+    8px 8px,
+    8px 8px;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.field select:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.field select:focus {
+  outline: none;
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow:
+    0 0 0 2px rgba(212, 175, 55, 0.15),
+    inset 0 0 0 9999px rgba(15, 10, 6, 0.45);
+}
+
+.field select option {
+  background-color: rgb(18, 12, 8); 
+  color: #f5f2eb;
+  font-size: 0.92rem;
+  padding: 0.45rem 0.6rem;
+}
+
+.field select option:hover,
+.field select option:focus {
+  background-color: rgba(212, 175, 55, 0.15);
+  color: #fff;
+}
+
+.field select option:checked {
+  background-color: rgba(212, 175, 55, 0.22);
+  color: #fff;
+}
+
+.field select option[value=""] {
+  color: rgba(255, 255, 255, 0.65);
+}
