@@ -16,29 +16,29 @@
   </url>
 
   <!-- Egyedi lakások -->
-  <url><loc>https://fiveprojekt.com/lakasok/L1</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L2</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L3</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L4</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L5</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L6</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L7</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L8</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L9</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L10</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L11</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L12</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L13</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L14</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L15</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L16</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L17</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L18</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L19</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L20</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L21</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L22</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L23</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fiveprojekt.com/lakasok/L24</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l1</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l2</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l3</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l4</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l5</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l6</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l7</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l8</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l9</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l10</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l11</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l12</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l13</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l14</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l15</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l16</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l17</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l18</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l19</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l20</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l21</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l22</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l23</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fiveprojekt.com/lakas/l24</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
 </urlset>
