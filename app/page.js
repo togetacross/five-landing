@@ -15,7 +15,7 @@ export const metadata = {
 
   title: 'FIVE° Projekt',
   description:
-    'Új építésű - kulcsrakész eladó lakások, 5 percre Győr belvárosától. Prémium műszaki tartalom, átlátható döntések.',
+    'Új építésű - kulcsrakész eladó lakások, 10 percre Győr belvárosától. Prémium műszaki tartalom, átlátható döntések.',
 
   alternates: {
     canonical: '/',
@@ -29,7 +29,7 @@ export const metadata = {
   openGraph: {
     title: 'FIVE° Projekt',
     description:
-      'Új építésű - kulcsrakész eladó lakások, 5 percre Győr belvárosától. Prémium műszaki tartalom, átlátható döntések.',
+      'Új építésű - kulcsrakész eladó lakások, 10 percre Győr belvárosától. Prémium műszaki tartalom, átlátható döntések.',
     type: 'website',
     url: '/',
     siteName: 'FIVE° Projekt',
@@ -41,7 +41,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'FIVE° Projekt',
     description:
-      'Új építésű - kulcsrakész eladó lakások, 5 percre Győr belvárosától. Prémium műszaki tartalom, átlátható döntések.',
+      'Új építésű - kulcsrakész eladó lakások, 10 percre Győr belvárosától. Prémium műszaki tartalom, átlátható döntések.',
     images: [ogDefault],
   },
 

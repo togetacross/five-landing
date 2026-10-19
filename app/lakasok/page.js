@@ -26,7 +26,7 @@ export async function generateMetadata({ searchParams }) {
   // SEO: listaoldalnál NE legyen query-függő canonical
   const title = 'Eladó lakások | FIVE° Projekt';
   const description =
-    'Új építésű társasház, kulcsrakész eladó lakások 5 percre Győr belvárosától.';
+    'Új építésű társasház, kulcsrakész eladó lakások 10 percre Győr belvárosától.';
 
   return {
     metadataBase: new URL(base),
