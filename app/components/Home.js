@@ -37,7 +37,7 @@ export default function Home() {
                 </div>
                 <div className={styles.metaItem}>
                   <span className={styles.metaLabel}>Győr belváros</span>
-                  <span className={styles.metaValue}>~5 perc</span>
+                  <span className={styles.metaValue}>~10 perc</span>
                 </div>
                 <div className={styles.metaItem}>
                   <span className={styles.metaLabel}>Lakások</span>
@@ -45,7 +45,7 @@ export default function Home() {
                 </div>
                 <div className={styles.metaItem}>
                   <span className={styles.metaLabel}>Átadás</span>
-                  <span className={styles.metaValue}>2027. szeptember</span>
+                  <span className={styles.metaValue}>2027. november</span>
                 </div>
               </div>
             </div>
